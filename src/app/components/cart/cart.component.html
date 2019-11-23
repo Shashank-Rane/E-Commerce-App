@@ -1,0 +1,36 @@
+<h4 style="text-align:center ;margin-top: 30px;">Cart</h4>
+
+
+<div class="container">
+    <div class="row ">
+        <table class="table bordered">
+            <thead>
+                <tr class="col-lg-12">
+                    <th class="col-lg-8 cart-grid">Product</th>
+                    <th class="col-lg-4 cart-grid">Price</th>
+                    <th class="col-lg-4 cart-grid">Quantity</th>
+                    <th class="col-lg-4 cart-grid">Delete item</th>
+                </tr>
+
+            </thead>
+            <tbody>
+                <tr class="col-lg-12" *ngFor="let pData of productsData">
+                    <th class="col-lg-4 cart-grid">{{pData.name}}</th>
+                    <th class="col-lg-4 cart-grid">{{pData.price}}</th>
+                    <th class="col-lg-4 cart-grid">{{pData.quantity}}</th>
+                    <th class="col-lg-4 cart-grid"><button type="button" class="btn-danger"
+                            (click)="onDeleteitem(pData)">Delete</button></th>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+    <div style="text-align:center">
+        <p>
+            <button class="btn btn-primary" (click)="onSubmit()">
+                Proceed To Payment
+            </button>
+        </p>
+    </div>
+
+</div>
