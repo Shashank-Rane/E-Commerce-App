@@ -33,7 +33,12 @@ export class CartComponent implements OnInit {
   }
 
   onSubmit(){
-    console.log(this.productsData);
-    return this.http.post<any>("mongourl",this.productsData).subscribe()
+    return this.http.post<any>('http://localhost:3000/cart',this.productsData).subscribe()
+  }
+
+  getCartData(){
+    return this.http.get('http://localhost:3000/cartData').subscribe(data=>{
+      console.log("Cart Data",data)
+    })
   }
 }
