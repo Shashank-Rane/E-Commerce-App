@@ -2,10 +2,11 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.19.
 
+Run `npm run start` for a dev server and node server to run simultaneously. Navigate to `http://localhost:4200/`.
+To check the data added in the MongoDB .Press the Get Cart Data button under Go to Cart button which would fetch cart details from DB.
+
 # Login 
 Please enter any credentials as only required validation is implemented.
-
-
 
 ## Development server
 
